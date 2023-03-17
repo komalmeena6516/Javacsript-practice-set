@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+<button>click me user</button>
+
+
+        <script>
+        // synchronus means running code in order
+// asynchronus means code running parallely
+
+// 9-March class
+// set time out
+function sayhello(){
+    console.log("hello komal", new Date().getMilliseconds());
+}
+
+setTimeout(sayhello, 1000);
+
+console.log("1", new Date().getMilliseconds());
+console.log("2", new Date().getMilliseconds());
+console.log("3", new Date().getMilliseconds());
+console.log("4", new Date().getMilliseconds());
+
+
+function hello1(){
+console.log("hello1")
+}
+function hello2(){
+console.log("hello2")
+}
+function hello3(){
+console.log("hello3")
+}
+function hello4(){
+console.log("hello4")
+}
+
+setTimeout(hello1, 2000);
+setTimeout(hello2, 3000);
+setTimeout(hello3, 4000);
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /*  your css code here. If applicable */
+            body {
+                color: orange
+            }
+
+            input {
+                padding: 10px;
+                margin: 10px;
+                width: 50%;
+                border: 2px solid blueviolet
+            }
+
+            button {
+                padding: 10px;
+                font-size: 20px;
+                margin: 20px 30px;
+                border: 10px dotted darkblue;
+                color: blue
+            }
+
+            label {
+                font-size: 25px;
+                font-style: bold;
+                font-family: sans-serif
+            }
+        </style>
+    </head>
+
+    <body>
+        <label>Enter Your name</label>
+
+        <input type="text" id="name"> <br>
+        <label>Enter Your Age</label>
+
+        <input type="number" id="age"> <br>
+        <button type="submit" id="btn">Submit</button>
+
+        <script>
+
+            // const age = document.getElementById("age").value;
+            // const name = document.getElementById("name").value;
+            const btn = document.getElementById("btn");
+
+            btn.addEventListener('click', run);
+
+            // console.log(name, age)
+
+            function checkAge() {
+                const umar = document.getElementById('age').value;
+                const naam = document.getElementById('name').value;
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        if (umar >= 18) {
+                            resolve("Welcome "+ naam +" You can vote")
+                        }
+                        else {
+                            reject("Sorry "+ naam +" You can not vote");
+                        }
+                    }, 4000);
+
+                })
+
+
+            }
+
+           function run(){
+                 checkAge().then((res) => {
+                alert(res);
+            })
+                .catch((err) => {
+                    alert(err);
+                });
+            }
+           
+
+
+
+
+        </script>
+    </body>
+
+</html>
