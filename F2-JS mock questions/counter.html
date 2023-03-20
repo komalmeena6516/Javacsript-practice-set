@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .container {
+                width: 30%;
+                padding: 10px;
+                margin: 20px auto;
+                background-color: rgb(25, 160, 43);
+                text-align: center;
+                font-size: 30px;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 10px 10px 10px rgb(2, 18, 2);
+height: 40px;
+            }
+
+            .btn-list {
+                margin: 10px auto;
+                /* background-color: aqua; */
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            button {
+                padding: 8px 20px;
+                font-size: 15px;
+                margin: 5px 20px;
+                border: 2px solid black;
+                border-radius: 5px;
+                background-color: rgb(156, 231, 65);
+                box-shadow: 5px 5px 5px black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container" id="input">0</div>
+        <div class="btn-list">
+            <button id="Increase">Increase</button>
+            <button id="reset">Reset</button>
+            <button id="Decrease">Decrease</button>
+        </div>
+
+
+        <script>
+            const input = document.getElementById("input");
+            let count = 0;
+
+            document.getElementById("Increase").onclick = function () {
+                count += 1;
+                input.innerText = count;
+            }
+
+            document.getElementById("reset").onclick = function () {
+                count = 0;
+                input.innerText = count;
+            }
+
+            document.getElementById("Decrease").onclick = function () {
+                count -=1;
+                input.innerText = count;
+            }
+
+        
+
+
+        </script>
+    </body>
+
+</html>

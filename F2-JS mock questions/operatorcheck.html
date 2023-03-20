@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            p {
+                font-size: 20px;
+                margin: 20px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>check the output and give the reson</h1>
+        <p> let x = 3; <br>
+            let y = new Number(3) ;<br>
+            let z = 3;<br>
+            console.log(x == y); // => true <br>
+            console.log(x === y); // => fase <br>
+            console.log(y === z); // false</p>
+
+        <p>
+            The first comparison x == y returns true because the == operator checks for equality of values, not types.
+            In this case, the value of x (which is 3) is equal to the value of y (which is also 3). However, x is a
+            primitive number type while y is an object of the Number type.
+        </p>
+        <p>
+            The second comparison x === y returns false because the === operator checks for equality of values and
+            types. In this case, x is a primitive number type and y is an object of the Number type, so they are not the
+            same type.
+        </p>
+
+        <p>
+            The third comparison y === z returns false because the === operator checks for equality of values and types.
+            In this case, y is an object of the Number type and z is a primitive number type, so they are not the same
+            type.
+        </p>
+
+        <script>
+            let x = 3;
+            let y = new Number(3);
+            let z = 3;
+            console.log(x == y);
+            console.log(x === y);
+            console.log(y === z);
+        </script>
+
+
+    </body>
+
+</html>

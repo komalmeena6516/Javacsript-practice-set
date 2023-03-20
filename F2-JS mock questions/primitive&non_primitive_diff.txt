@@ -1,0 +1,34 @@
+whai primitive data type in js
+******************************
+
+In JavaScript, there are two categories of data types: primitive and non-primitive (or object) types. The main differences between them are:
+
+1 . Primitive data types are immutable: 
+****************************************
+This means that once a primitive value is created, it cannot be changed. If you assign a new value to a variable that holds a primitive value, the original value is replaced with the new value. Non-primitive types, on the other hand, are mutable, meaning that their values can be changed.
+
+2 .Primitive data types are passed by value:
+***********************************************
+ When you pass a primitive value as an argument to a function or assign it to a variable, a copy of the value is created and passed or assigned. This means that changes made to the value inside the function or in a different variable do not affect the original value. Non-primitive types are passed by reference, meaning that a reference to the original value is passed or assigned, and changes made to the value inside the function or in a different variable affect the original value.
+
+3 . Primitive data types have no methods or properties: 
+****************************************************
+Unlike non-primitive types, Primitive types have no built-in methods or properties. However, there are several methods and properties available to work with primitive types in JavaScript, thanks to their object wrappers.
+
+The six primitive data types in JavaScript are: boolean, null, undefined, number, string, and symbol. Non-primitive data types include objects, arrays, functions, and more
+
+///////////////////////////////////////////////////////////////////////////////
+Q:console.log(typeof undefined == typeof NULL)
+explain ans
+
+ans: The result of the expression typeof undefined == typeof NULL is true.
+
+This might be surprising since undefined and null are not the same thing in JavaScript. Here's why the expression evaluates to true:
+
+typeof undefined returns the string "undefined", which is the type of the undefined value.
+typeof NULL returns the string "object". This is because the null value is considered to be an empty object reference, which is a historical quirk in JavaScript.
+So the expression is equivalent to "undefined" == "object", which is false. However, the == operator performs type coercion, meaning that it converts the operands to a common type before comparing them. In this case, "object" is coerced to a boolean value true, and "undefined" is coerced to a boolean value false. Therefore, the expression is evaluated as false == true, which results in false.
+
+In summary, the expression typeof undefined == typeof NULL returns true, but the value of the expression is false.
+
+////////////////////////////////////////////////////////////////////////////////
