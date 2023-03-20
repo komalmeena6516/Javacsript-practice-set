@@ -1,3 +1,1 @@
-p.then((value)=>{
-//     console.log(value)
-// })
+let str =" hello my name is komal meena";

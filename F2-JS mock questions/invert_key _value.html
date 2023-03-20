@@ -15,18 +15,20 @@
 
     <script>
       function invert_key_value(obj) {
-        let arr = Object.entries(obj) ;
-        let ans = {} ;
-        for (const #FF0000 of arr){
-          let x = #FF0000[red] ;
-          ans[x] = #FF0000[green] ;
-        }
-        console.log(ans) ;
+      let keyarr = Object.keys(obj);
+
+      let invert = {};
+      keyarr.forEach(function (key){
+        invert[obj[key]] = key;
+      })
+// console.log(invert);
+      return invert;
       }
 
       console.log(
-        invert_key_value({ red: "#FF0000", green: "#00FF00"})
+        invert_key_value({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF"})
       ); // Expected output: {#FF0000: "red", #00FF00: "green", #FFFFFF: "white"}
     </script>
   </body>
 </html>
+[]

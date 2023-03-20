@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Static Template</title>
+    </head>
+
+    <body>
+        <h1>
+            This is a static template, there is no bundler or bundling involved!
+        </h1>
+
+        <script>
+            const arr = [];
+            const listToArray = function (obj, arr) {
+                // Write your code here
+                if(obj.rest == null){
+                    arr.push(obj.value)
+                    return arr;
+                }
+
+                arr.push(obj.value);
+                return listToArray(obj.rest, arr);
+            };
+
+            console.log(listToArray({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }, arr));
+        // Output: [1,2,3]
+        </script>
+    </body>
+
+</html>

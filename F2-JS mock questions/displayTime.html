@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+
+  <body></body>
+  <script>
+    function xTime(x, y) {
+      // Write your code here
+
+      let i = 0;
+      let interval_Id = setInterval(() => {
+
+        if (i == y - 1) {
+          clearInterval(interval_Id)
+        }
+        i++;
+        let time = new Date().toLocaleTimeString();
+        console.log(time);
+
+      }, x * 1000)
+
+    }
+
+
+    xTime(2, 5);
+
+    /*
+    Expected Output in console example (if the current time is 7:59:41 am):
+      7:59:41 AM
+      7:59:43 AM
+      7:59:45 AM
+      7:59:47 AM
+      7:59:49 AM
+    */
+  </script>
+
+</html>

@@ -22,23 +22,23 @@
 
 // }
 
-let str =" hello my name is komal meena";
+// let str =" hello my name is komal meena";
 
 // let ans = Array.from(str);
 // console.log(ans);
-let ans1 = str.trim();
-ans1 =ans1.split(' ');
-console.log(ans1);
- ans1 = ans1.join(" ");
- console.log(ans1);
+// let ans1 = str.trim();
+// ans1 =ans1.split(' ');
+// console.log(ans1);
+//  ans1 = ans1.join(" ");
+//  console.log(ans1);
 
- for(let i = 0; i<ans1.length; i++){
-    let ans3 = ans1.charCodeAt(i)
-    console.log(ans3);
- }
- let s = "komal" 
- let k = 2;
- cipher(s, k);
+//  for(let i = 0; i<ans1.length; i++){
+//     let ans3 = ans1.charCodeAt(i)
+//     console.log(ans3);
+//  }
+//  let s = "komal" 
+//  let k = 2;
+//  cipher(s, k);
 
 //  function cipher(s, k) {
     // c=104
@@ -51,3 +51,23 @@ console.log(ans1);
 //     return new_s;
 // }
 
+a(4, 5)
+x()
+
+function a(a, b){
+ return console.log("helw");
+}
+
+let x = function (){
+console.log("jgjhg")
+}
+
+function newk(pare1){
+ return console.log(para1);
+}
+
+new(call);
+
+function call(){
+    let b;
+}
