@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Age Difference Calculator</title>
+  </head>
+  <body>
+    <h1>Enter Birthdates</h1>
+    <label for="my-birthdate">Your Birthdate:</label>
+    <input type="date" id="my-birthdate">
+    <br><br>
+    <label for="other-birthdate">Other Person's Birthdate:</label>
+    <input type="date" id="other-birthdate">
+    <br><br>
+    <button onclick="calculateAgeDifference()">Calculate Age Difference</button>
+    <br><br>
+    <h3 id="age-difference"></h3>
+    
+    <script>
+      function calculateAgeDifference() {
+        var myBirthdate = new Date(document.getElementById("my-birthdate").value);
+        var otherBirthdate = new Date(document.getElementById("other-birthdate").value);
+        
+        var timeDiff = Math.abs(myBirthdate.getTime() - otherBirthdate.getTime());
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+        var diffYears = Math.floor(diffDays / 365);
+        var remainingDays = diffDays % 365;
+        
+        var message = "The age difference is ";
+        if (diffYears > 0) {
+          message += diffYears + " year(s) and ";
+        }
+        message += remainingDays + " day(s).";
+        
+        document.getElementById("age-difference").innerHTML = message;
+      }
+    </script>
+  </body>
+</html>
