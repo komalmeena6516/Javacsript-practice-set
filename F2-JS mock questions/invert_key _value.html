@@ -14,20 +14,35 @@
     </h1>
 
     <script>
-      function invert_key_value(obj) {
-      let keyarr = Object.keys(obj);
+      function invert_key_value(obj) 
+      {
+      let keyarr = Object.keys(obj);  // keyarr= [red, green, white]
 
-      let invert = {};
+      let invert = {}
+      // invert[name] = "komal"
+      };
+      // invert[name] = komal
+
+
       keyarr.forEach(function (key){
+
         invert[obj[key]] = key;
+        // invert[#ff000] = red
       })
 // console.log(invert);
       return invert;
-      }
+      
 
       console.log(
         invert_key_value({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF"})
-      ); // Expected output: {#FF0000: "red", #00FF00: "green", #FFFFFF: "white"}
+      ); 
+
+    
+      // Expected output: {#FF0000: "red", #00FF00: "green", #FFFFFF: "white"}
+
+     
+
+    
     </script>
   </body>
 </html>

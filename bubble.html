@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <link rel="stylesheet" href="./src/styles.css"> -->
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 30px;
+                background: #ededed;
+            }
+
+            .wrapper {
+                max-width: 690px;
+                margin: 0 auto;
+            }
+
+            .blue {
+                color: #3f7abe;
+            }
+
+            h1 {
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                color: #08a3d9;
+                text-transform: uppercase;
+                font-size: 30px;
+                color: #000380;
+            }
+
+            #bubble-gallery div {
+                background: #ff3300;
+                height: 121px;
+                width: 119px;
+                text-align: center;
+                color: #ff3300;
+                font-size: 40px;
+                font-family: sans-serif, arial;
+                border-radius: 100%;
+                margin-top: 20px;
+                display: inline-block;
+                /* float: left; */
+                margin: 2.5px 5 px 2.5px 0px;
+            }
+
+            #bubble-gallery div {
+                background: #ffce00;
+                color: #ffce00;
+            }
+
+            #yay-no-bubbles {
+                display: none;
+                color: #ff3300;
+                font-size: 100px;
+            }
+
+            .popped {
+                display: none;
+            }
+        </style>
+        <title>Pop the Ballons</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1>Pop the bubbles by moving</br>your mouse over them</h1>
+            <div id="yay-no-bubbles"><span class="blue">Wow!</span> All bubbles popped!</div>
+            <div id="bubble-gallery">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+
+        </div>
+        <!-- <script src="./src/index.js"></script> -->
+        <script>
+            // Get all the bubble elements
+            const bubbles = document.querySelectorAll('.bubble');
+
+            // Set up a counter for popped bubbles
+            let poppedCount = 0;
+
+            // Loop through each bubble and add a click event listener
+            bubbles.forEach((bubble) => {
+                bubble.addEventListener("click", () => {
+                    // Check if the bubble has already been popped
+                    if (!bubble.classList.contains("popped")) {
+                        // Mark the bubble as popped
+                        bubble.classList.add("popped");
+                        // Increase the popped bubble count
+                        poppedCount++;
+                        // Check if all bubbles have been popped
+                        if (poppedCount === bubbles.length) {
+                            // Show the win message
+                            const winMessage = document.getElementById("yay-no-bubbles");
+                            winMessage.innerText = "You win!";
+                            winMessage.style.display = "block";
+                        }
+                    }
+                });
+            });
+
+        </script>
+    </body>
+
+</html>

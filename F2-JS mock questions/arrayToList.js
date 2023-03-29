@@ -2,6 +2,7 @@
   const arrayToList = function (arr) {
     // Write your code here
     let list = null;
+    
     for(let i = arr.length - 1; i >= 0; i--){
       list = {value: arr[i], rest: list};
     }
@@ -28,7 +29,7 @@
   };
 
 
- console.log(arrayToListRecursive([5, 4, 3, 2, 1]));
+ console.log(arrayToListRecursive([10, 20, 30, 40]));
   
   /* Output: {value: 10, rest: {value: 20, rest: {
 value:	30

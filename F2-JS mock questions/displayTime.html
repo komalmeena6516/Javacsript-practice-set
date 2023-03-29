@@ -13,12 +13,13 @@
     function xTime(x, y) {
       // Write your code here
 
-      let i = 0;
+      let i = 1;
       let interval_Id = setInterval(() => {
 
-        if (i == y - 1) {
+        if (i == y ) {
           clearInterval(interval_Id)
         }
+        
         i++;
         let time = new Date().toLocaleTimeString();
         console.log(time);

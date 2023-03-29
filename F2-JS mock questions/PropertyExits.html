@@ -25,10 +25,14 @@
                 return (a.hasOwnProperty(b));
             }
             console.log(propExists1({ x: "a", y: "b", z: "c" }, "a")); // output: false
+
             console.log(propExists2({ x: "a", y: "b", z: "c" }, "a")); // output: false
+
             console.log(propExists1({ a: 1, b: 2, c: 3 }, "b")); // output: true
             console.log(propExists2({ a: 1, b: 2, c: 3 }, "b")); // output: true
+            
             console.log(propExists1({ x: "a", y: "b", z: undefined }, "z")); // output: true
+
             console.log(propExists2({ x: "a", y: "b", z: undefined }, "z")); // output: true
         </script>
     </body>
